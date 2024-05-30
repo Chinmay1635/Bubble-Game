@@ -5,6 +5,10 @@ var timerDisplay = document.querySelector("#timer");
 var scoreDisplay = document.querySelector("#score")
 var hitDisplay = document.querySelector("#hit");
 var hitrn;
+var infoBtn = document.querySelector("#info");
+var closeBtn = document.querySelector("#close");
+
+
 
 function bubbleMaker(){
     var clutter = '';
@@ -38,6 +42,27 @@ function hitMaker(){
     hitrn = Math.floor(Math.random()*10);
     hitDisplay.textContent = hitrn;
 }
+
+infoBtn.addEventListener("click",function(){
+    gameArea.innerHTML='';
+    gsap.to("#information",{
+        scale:1,
+        visibility:"visible",
+        duration:0.5,
+    })
+})
+closeBtn.addEventListener("click",function(){
+    gsap.to("#information",{
+        scale:0,
+        // visibility:"hidden",
+        duration:0.5,
+    })
+    setTimeout(function(){
+        bubbleMaker();
+    },500);
+})
+
+
 
 bubbleMaker();
 timerFunction();

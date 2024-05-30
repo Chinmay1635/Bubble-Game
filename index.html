@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bubble Game</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
 </head>
 <body>
     <div id="main">
+        <div id="info"><i class="ri-information-fill"></i></div>
+        <div id="information">
+            <div id="close"><i class="ri-close-line"></i></div>
+            <div id="data"><h2>How To Play?</h2>
+                <h4> 1. A random number will be displayed at the top as hit.</h4>
+                <h4> 2. Your goal is to find and click on the bubble with the same number as the hit number.</h4>
+                <h4> 3. Each correct click will earn you 10 points and a new hit number will be generated.</h4>
+                <h4>4. Be quick and accurate to score the highest points before time runs out!</h4>   
+               </div>
+        </div>
         <div id="panel">
             <div id="ptop">
                 <div class="elem">
@@ -32,7 +45,7 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 </html>
