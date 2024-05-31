@@ -42,31 +42,34 @@ function hitMaker(){
     hitrn = Math.floor(Math.random()*10);
     hitDisplay.textContent = hitrn;
 }
+function howToPlay(){
+    infoBtn.addEventListener("click",function(){
+        gameArea.innerHTML='';
+        gsap.to("#information",{
+            scale:1,
+            visibility:"visible",
+            duration:0.5,
+        })
+    })
+    closeBtn.addEventListener("click",function(){
+        gsap.to("#information",{
+            scale:0,
+            // visibility:"hidden",
+            duration:0.5,
+        })
+        setTimeout(function(){
+            bubbleMaker();
+        },500);
+    })
+}
 
-infoBtn.addEventListener("click",function(){
-    gameArea.innerHTML='';
-    gsap.to("#information",{
-        scale:1,
-        visibility:"visible",
-        duration:0.5,
-    })
-})
-closeBtn.addEventListener("click",function(){
-    gsap.to("#information",{
-        scale:0,
-        // visibility:"hidden",
-        duration:0.5,
-    })
-    setTimeout(function(){
-        bubbleMaker();
-    },500);
-})
 
 
 
 bubbleMaker();
 timerFunction();
 hitMaker();
+howToPlay();
 function mainFunction(){
     gameArea.addEventListener("click",function(data){
         var userNumber = Number(data.target.textContent);
