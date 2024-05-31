@@ -1,4 +1,4 @@
-var timer = 30;
+var timer = 45;
 var score = 0;
 var gameArea = document.querySelector("#pbtm");
 var timerDisplay = document.querySelector("#timer");
@@ -58,12 +58,10 @@ function howToPlay(){
             duration:0.5,
         })
         setTimeout(function(){
-            bubbleMaker();
+            gameArea.innerHTML="<h1>Reload to play game";
         },500);
     })
 }
-
-
 
 
 bubbleMaker();
