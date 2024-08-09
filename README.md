@@ -1,2 +1,2 @@
-**Live projec link**
+**Live project link**
 https://bubblegamebyck.netlify.app/
